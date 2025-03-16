@@ -11,6 +11,9 @@ def get_data():
     try:
         with open("data.json", "r", encoding="utf-8") as f:
             data = json.load(f)
+        # 如果讀取到的 data 是字串，就再解析一次
+        if isinstance(data, str):
+            data = json.loads(data)
         return jsonify(data)
     except FileNotFoundError:
         return jsonify({"error": "data.json not found"}), 404
