@@ -5,7 +5,7 @@ def fetch_data():
     # 伺服器 API 的 URL
     url = "http://114.34.88.191:23080/DgApi/Api/GetData/"
     # 傳送的 JSON 資料，請根據需求修改 id 值（例如："A12345"）
-    payload = {"id": "A12345"}
+    payload = {"id": "B67890"}
     headers = {"Content-Type": "application/json"}
 
     try:
